@@ -1,4 +1,4 @@
-M ubuntu
+FROM ubuntu
 MAINTAINER cm 2014-03-07_2
 
 # Install Nginx.
