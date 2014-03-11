@@ -1,5 +1,5 @@
 FROM ubuntu
-MAINTAINER cm 2014-03-10_4
+MAINTAINER cm 2014-03-10_7
 
 # Install vsftp
 RUN apt-get update -q
@@ -9,6 +9,8 @@ RUN mkdir -p /var/run/vsftpd/empty
 
 # Add configuration file
 ADD vsftpd.conf /etc/vsftpd.conf
+RUN chown root /etc/vsftpd.conf
+RUN chmod 777 /etc/vsftpd.conf
 
 # Expose ports.
 EXPOSE 21
