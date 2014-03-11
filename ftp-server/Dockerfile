@@ -12,6 +12,9 @@ ADD vsftpd.conf /etc/vsftpd.conf
 RUN chown root /etc/vsftpd.conf
 RUN chmod 777 /etc/vsftpd.conf
 
+# Create default folder
+RUN mkdir /var/ftp
+
 # Expose ports.
 EXPOSE 20
 EXPOSE 21
